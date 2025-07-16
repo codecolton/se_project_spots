@@ -16,4 +16,4 @@ This is a website that is able to adapt to fit on a variety of screen sizes, suc
 
 This webpage is deployed to GitHub Pages
 
-- Deployment Link:
+- [Deployment Link](https://codecolton.github.io/se_project_spots/)
