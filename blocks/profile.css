@@ -5,6 +5,7 @@
 }
 
 .profile__avatar {
+  object-fit: cover;
   height: 190px;
   width: 190px;
   margin-right: 20px;
@@ -22,6 +23,11 @@
   font-size: 32px;
   line-height: 1;
   max-width: 420px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .profile__description {
@@ -30,10 +36,16 @@
   font-size: 16px;
   line-height: 1;
   max-width: 420px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .profile__edit-btn {
   margin-top: auto;
+  padding: 0;
   background: none;
   border: none;
   text-align: left;
@@ -56,6 +68,7 @@
   margin-left: auto;
   color: #fcf5e5;
   background-color: #212121;
+  border: none;
   border-radius: 8px;
   width: 149px;
   height: 52px;
@@ -91,21 +104,11 @@
   .profile__name {
     font-size: 20px;
     margin: 0 0 6px;
-    display: -webkit-box;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
     max-width: 288px;
   }
 
   .profile__description {
     margin: 0 0 32px;
-    display: -webkit-box;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
     max-width: 288px;
   }
 
