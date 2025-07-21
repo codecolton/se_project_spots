@@ -112,6 +112,10 @@
     max-width: 288px;
   }
 
+  .profile__edit-btn {
+    margin: auto;
+  }
+
   .profile__column {
     margin: 0 0 20px;
   }
