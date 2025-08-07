@@ -9,10 +9,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: visibility 0.3s ease-in, opacity 0.3s ease-in;
+  opacity: 0;
 }
 
 .modal_is-opened {
   visibility: visible;
+  opacity: 1;
 }
 
 .modal__container {
@@ -33,6 +36,11 @@
   background-image: url(../images/close.svg);
   border: none;
   background-color: #fff;
+}
+
+.modal__close-btn:hover {
+  cursor: url(../images/pointer.png), pointer;
+  opacity: 100%;
 }
 
 .modal__title {
@@ -92,4 +100,9 @@
   padding: 18px 32px 18px;
   width: 156px;
   height: 52px;
+}
+
+.modal__submit-btn:hover {
+  cursor: url(../images/pointer.png), pointer;
+  opacity: 100%;
 }
