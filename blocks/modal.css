@@ -40,6 +40,7 @@
   background-image: url(../images/close.svg);
   border: none;
   background-color: #fff;
+  opacity: 40%;
 }
 
 .modal__close-btn:hover {
@@ -49,7 +50,7 @@
 
 .modal__title {
   margin: 0 0 32px;
-  font-family: Poppins;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 32px;
   line-height: 100%;
@@ -65,7 +66,7 @@
   display: block;
   margin: 8px 0 32px;
   width: 100%;
-  font-family: Poppins;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 20px;
   line-height: 100%;
@@ -82,13 +83,13 @@
 }
 
 .modal__submit-btn {
-  width: 156px;
-  font-family: Poppins;
+  width: 100%;
+  max-width: 156px;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 500;
-  font-style: Medium;
+  font-style: normal;
   font-size: 16px;
   line-height: 100%;
-  letter-spacing: 0%;
   color: #fcf5e5;
   background-color: #212121;
   border: none;
@@ -99,7 +100,7 @@
 
 .modal__submit-btn:hover {
   cursor: url(../images/pointer.png), pointer;
-  opacity: 100%;
+  opacity: 80%;
 }
 
 @media (max-width: 480px) {
@@ -109,17 +110,18 @@
   }
 
   .modal__title {
-    width: 106px;
-    height: 20px;
+    width: auto;
+    height: auto;
     font-size: 20px;
     margin-top: 10px;
   }
 
   .modal__submit-btn {
-    width: 276px;
+    max-width: none;
   }
 
   .modal__close-btn {
+    top: 22px;
     right: 8px;
   }
 }
