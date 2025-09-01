@@ -133,11 +133,12 @@ function handleAddCardSubmit(evt) {
 
   const inputValues = {
     name: addCardCaptionInput.value,
-    link: addCardCaptionInput.value,
+    link: addCardImageInput.value,
   };
 
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
+  addCardForm.reset();
   closeModal(newPostModal);
 }
 
