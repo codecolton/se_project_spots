@@ -4,12 +4,13 @@ An image sharing site.
 
 ## Description
 
-This is a webpage that is able to adapt to fit on a variety of screen sizes, such as a phone, tablet, or desktop screen. The buttons and icons react when hovered over.
+This is a webpage that you can add or remove images and is able to adapt to fit on a variety of screen sizes, such as a phone, tablet, or desktop screen. The buttons and icons react when hovered over.
 
 ## Tech Stack
 
 - HTML
 - CSS
+- JavaScript
 - Responsive Design
 
 ## Deployment
