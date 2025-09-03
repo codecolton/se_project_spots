@@ -44,7 +44,6 @@
   background-image: url(../images/close.svg);
   border: none;
   background-color: transparent;
-  opacity: 40%;
 }
 
 .modal__close-btn:hover {
@@ -126,7 +125,7 @@
 }
 
 .modal__image {
-  max-width: 80vw;
+  max-width: 90vw;
   max-height: 80vh;
   width: 100%;
   object-fit: contain;
