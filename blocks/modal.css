@@ -61,6 +61,10 @@
   cursor: url(../images/pointer.png), pointer;
 }
 
+.modal__button_disabled {
+  color: grey;
+}
+
 .modal__title {
   margin: 0 0 32px;
   font-family: Poppins, Arial, Helvetica, sans-serif;
@@ -75,9 +79,15 @@
   flex-direction: column;
 }
 
+.modal__label {
+  color: rgba(33, 33, 33, 0.7);
+  margin-bottom: 32px;
+  display: block;
+}
+
 .modal__input {
   display: block;
-  margin: 8px 0 32px;
+  margin: 8px 0 0;
   width: 100%;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 500;
@@ -97,6 +107,16 @@
 
 .modal__input:hover {
   border-color: #212121;
+}
+
+.modal__input_type_error {
+  border: 1px solid rgba(255, 0, 0, 0.6);
+}
+
+.modal__error {
+  display: block;
+  margin-top: 8px;
+  color: red;
 }
 
 .modal__submit-btn {
