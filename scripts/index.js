@@ -98,29 +98,21 @@ function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
 }
 
-function escapeButton(evt) {
+document.addEventListener("keydown", function (evt) {
   if (evt.key === "Escape") {
     closeModal(previewModal);
     closeModal(editProfileModal);
     closeModal(newPostModal);
   }
-}
+});
 
-previewModal.addEventListener("keydown", escapeButton);
-editProfileModal.addEventListener("keydown", escapeButton);
-newPostModal.addEventListener("keydown", escapeButton);
-
-function clickButton(evt) {
+document.addEventListener("click", function (evt) {
   if (evt.target.classList.contains("modal")) {
     closeModal(previewModal);
     closeModal(editProfileModal);
     closeModal(newPostModal);
   }
-}
-
-previewModal.addEventListener("click", clickButton);
-editProfileModal.addEventListener("click", clickButton);
-newPostModal.addEventListener("click", clickButton);
+});
 
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;

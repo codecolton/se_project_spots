@@ -21,7 +21,7 @@ const hideInputError = (formEl, inputEl, config) => {
   inputEl.classList.remove(config.inputErrorClass);
 };
 
-const checkInputValidity = (formEl, inputEl, errorMsg, config) => {
+const checkInputValidity = (formEl, inputEl, config) => {
   if (!inputEl.validity.valid) {
     showInputError(formEl, inputEl, inputEl.validationMessage, config);
   } else {
@@ -64,7 +64,12 @@ const setEventListeners = (formEl, config) => {
 
   inputList.forEach((inputElement) => {
     inputElement.addEventListener("input", function () {
-      checkInputValidity(formEl, inputElement, errorMsg, config);
+      checkInputValidity(
+        formEl,
+        inputElement,
+        inputElement.validationMessage,
+        config
+      );
       toggleButtonState(inputList, buttonElement, config);
     });
   });
@@ -73,7 +78,7 @@ const setEventListeners = (formEl, config) => {
 const enableValidation = (config) => {
   const formList = document.querySelectorAll(config.formSelector);
   formList.forEach((formEl) => {
-    setEventListeners(formEl, errorMsg, config);
+    setEventListeners(formEl, config);
   });
 };
 
