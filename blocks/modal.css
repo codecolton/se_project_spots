@@ -61,10 +61,6 @@
   cursor: url(../images/pointer.png), pointer;
 }
 
-.modal__button_disabled {
-  color: #212121;
-}
-
 .modal__title {
   margin: 0 0 32px;
   font-family: Poppins, Arial, Helvetica, sans-serif;
@@ -138,6 +134,10 @@
 .modal__submit-btn:hover {
   cursor: url(../images/pointer.png), pointer;
   opacity: 80%;
+}
+
+.modal__submit-btn_disabled {
+  opacity: 0.7;
 }
 
 .modal__image-container {
