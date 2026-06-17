@@ -19,6 +19,9 @@ This webpage is deployed to GitHub Pages
 
 - [Deployment Link](https://codecolton.github.io/se_project_spots/)
 
-## Supplemental Video
+## Project Pitch Videos
 
-- [Video Link](https://drive.google.com/file/d/1-GLg9IAMI8U5ZmezV6tr8vTKQE4PbLIl/view?usp=sharing)
+Check out these videos, where I describe my project and some challenges I faced while building it:
+
+- [Spots Stage 3](https://drive.google.com/file/d/1-GLg9IAMI8U5ZmezV6tr8vTKQE4PbLIl/view?usp=sharing)
+- [Spots Final Stage](https://drive.google.com/file/d/1XTiVBPlz4fcNYhl45C18ms9WM_lYBJS1/view?usp=sharing)
