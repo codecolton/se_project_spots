@@ -3,6 +3,7 @@ import {
   enableValidation,
   settings,
   disableButton,
+  resetValidation,
 } from "../scripts/validation.js";
 import { setButtonText } from "../utils/helpers.js";
 import Api from "../utils/Api.js";
@@ -133,6 +134,10 @@ function getCardElement(data) {
   cardImageEl.alt = data.name;
   cardTitleEl.textContent = data.name;
 
+  if (data.isLiked) {
+    cardLikeBtnEl.classList.add("card__like-btn_active");
+  }
+
   cardLikeBtnEl.addEventListener("click", (evt) => handleLike(evt, data._id));
 
   cardDeleteBtnEl.addEventListener("click", () =>
@@ -224,6 +229,7 @@ document.addEventListener("click", function (evt) {
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
+  resetValidation(editProfileForm, settings);
   openModal(editProfileModal);
 });
 
@@ -273,20 +279,30 @@ function handleEditProfileSubmit(evt) {
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
 
+  const submitBtn = evt.submitter;
+
+  setButtonText(submitBtn, true);
+
   const inputValues = {
     name: addCardCaptionInput.value,
     link: addCardImageInput.value,
   };
 
-  api.createCard(inputValues).then((card) => {
-    const cardElement = getCardElement(card);
-    cardsList.prepend(cardElement);
+  api
+    .createCard(inputValues)
+    .then((card) => {
+      const cardElement = getCardElement(card);
+      cardsList.prepend(cardElement);
 
-    addCardForm.reset();
+      addCardForm.reset();
 
-    disableButton(addCardSubmitBtn, settings);
-    closeModal(newPostModal);
-  });
+      disableButton(addCardSubmitBtn, settings);
+      closeModal(newPostModal);
+    })
+    .catch(console.error)
+    .finally(() => {
+      setButtonText(submitBtn, false);
+    });
 }
 
 addCardForm.addEventListener("submit", handleAddCardSubmit);
